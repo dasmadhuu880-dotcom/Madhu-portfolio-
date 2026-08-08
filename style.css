@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --border: #333;
+  --text: #171717;
+  --muted: #777;
+  --panel: #eef1f4;
+  --link: #1683b8;
+  --radius: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.45;
+}
+
+.page {
+  width: min(1180px, calc(100% - 32px));
+  margin: 10px auto;
+  border: 1px solid var(--border);
+  min-height: calc(100vh - 20px);
+}
+
+.header {
+  min-height: 72px;
+  padding: 20px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.brand-icon {
+  width: 28px;
+  height: 28px;
+  background: #111;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.menu-btn {
+  display: none;
+  border: 1px solid #555;
+  background: white;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 210px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+.hero h1,
+h2,
+h3 {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 50px);
+}
+
+.hero p {
+  color: var(--muted);
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.55fr 1.2fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.main-grid > section {
+  min-height: 335px;
+  border-right: 1px solid var(--border);
+}
+
+.main-grid > section:last-child {
+  border-right: 0;
+}
+
+.main-grid h2 {
+  font-size: 23px;
+  padding: 18px 24px 12px;
+}
+
+.projects a {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.projects a:hover {
+  background: var(--panel);
+}
+
+.experience-item {
+  padding: 14px 20px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.experience-item h3 {
+  font-size: 20px;
+}
+
+.experience-item p {
+  margin: 3px 0 8px;
+  font-size: 14px;
+}
+
+a {
+  color: var(--link);
+}
+
+.experience-item a {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.education {
+  padding-bottom: 18px;
+}
+
+.education p,
+.education h3,
+.education ul {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.education p {
+  font-size: 14px;
+}
+
+.education h3 {
+  margin-top: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.education ul {
+  margin-top: 7px;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
+.reviews {
+  padding: 25px 30px 55px;
+}
+
+.reviews h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review {
+  border: 2px solid #333;
+  border-radius: 28px;
+  padding: 22px 20px;
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review p {
+  font-size: 14px;
+}
+
+.reviewer {
+  color: #c8c8c8;
+  font-size: 14px;
+}
+
+.reviewer span {
+  color: #c8c8c8;
+}
+
+.contact {
+  border-top: 1px solid var(--border);
+  padding: 35px;
+}
+
+.contact h2 {
+  font-size: 27px;
+  margin-bottom: 18px;
+}
+
+.contact form {
+  max-width: 700px;
+  margin: auto;
+  display: grid;
+  gap: 12px;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  border: 1px solid #aaa;
+  padding: 12px;
+  font: inherit;
+  border-radius: 6px;
+}
+
+.contact button {
+  background: #111;
+  color: white;
+  border: 0;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+
+footer {
+  text-align: center;
+  padding: 35px 20px 45px;
+  font-family: "Patrick Hand", cursive;
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    width: min(100% - 16px, 600px);
+    margin: 8px auto;
+  }
+
+  .header {
+    padding: 16px 20px;
+    position: relative;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 10px;
+    right: 10px;
+    z-index: 10;
+    background: white;
+    border: 1px solid #333;
+    padding: 15px;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav span {
+    display: none;
+  }
+
+  .hero {
+    min-height: 190px;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-grid > section {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .main-grid > section:last-child {
+    border-bottom: 0;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .reviews {
+    padding: 24px 20px 40px;
+  }
+
+  .review {
+    min-height: 125px;
+  }
+
+  .contact {
+    padding: 25px 20px;
+  }
+}
+
+@media (min-width: 801px) {
+  .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .brand-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
